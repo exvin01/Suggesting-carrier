@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>DALITSO ELIAS</title>
+  <style>
+    body {
+      background-color: skyblue;
+      color: blue;
+      font-family: Arial;
+    }
+    div {
+      display: grid;
+      justify-content: center;
+      text-align: center;
+      border: 2px solid black;
+      width: 90%;
+      padding: 20px;
+      margin: 50px auto;
+      font-size: 4em;
+    }
+    .box {
+      font-size: 50px;
+      border: 2px solid black;
+      color: darkblue;
+      padding: 1.5%;
+      margin: 3%;
+    }
+    .suggest {
+      width: 270px;
+      height: 100px;
+      background-color: green;
+      border-radius: 15px;
+      font-size: 50px;
+      margin: 3%;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="h1"> </h1>
+  <div id="C1" class="C1">
+    <!-- name block-->
+    <code>ENTER YOUR SURNAME 👇 </code>
+    <input class="box" id="surname"type="text" name="surname" placeholder="Enter surname">
+    <!--programm block-->
+    <code>SELECT YOUR PROGRAMM👇</code>
+    <select class="box" id="programm">
+      <option value="teacher">bachelor of education</option>
+      <option value="doctor">bachelor of medicine</option>
+      <option value="ICT OFFICER">bachelor of information technology</option>
+      <option value="soldier"> bachelor security studies</option>
+      <option value="Kasongo mbonawewo">bachelor of Nyashi</option>
+        <option value="A poor man">bachelor of girls</option>
+    </select>
+    <!--function block-->
+    <code>CLICK SUGGEST BUTTON TO SUGGEST YOUR CARRIER👇</code>
+    <button class="suggest" onclick="selectelement()">SUGGEST</button>
+  </div>
+  <script>
+    function selectelement() {
+      var surname = document.getElementById("surname");
+      var programm = document.getElementById("programm");
+      var name = surname.value;
+      var selectedValue = programm.value;
+      console.log(selectedValue);
+      alert( "Hello "+ name + " you will be  "+ selectedValue);
+    }
+  </script>
+</body>
+</html>
